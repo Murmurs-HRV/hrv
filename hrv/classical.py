@@ -206,7 +206,7 @@ def frequency_domain(
             rri = polynomial_detrend(rri, degree=1)
         fxx, pxx = _calc_pburg_psd(rri=rri, fs=fs, **kwargs)
 
-    return _auc(fxx, pxx, vlf_band, lf_band, hf_band)
+    return fxx, pxx, _auc(fxx, pxx, vlf_band, lf_band, hf_band)
 
 
 def _auc(fxx, pxx, vlf_band, lf_band, hf_band):
