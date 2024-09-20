@@ -15,7 +15,7 @@ Classes
 """
 
 import sys
-from collections import MutableMapping, defaultdict
+from collections.abc import MutableMapping, defaultdict
 
 import matplotlib.pyplot as plt
 import numpy as np
